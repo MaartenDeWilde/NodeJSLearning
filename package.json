@@ -2,6 +2,11 @@
     "name": "NodeJSLeaning",
     "version": "0.0.1",
     "dependencies": {
-        "express": "2.5.8"
+        "express": "2.5.8",
+        "mongoose": ">=2.4.8",
+        "jade": ">=0",
+        "stylus": ">=0",
+        "mongoose-types": ">=1.0.3",
+        "redis": ">0.0.1"
     }
 }

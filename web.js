@@ -6,6 +6,7 @@
  */
 
 var express = require('express');
+var boostrap = require('./init/bootstrap.js');
 
 var app = express.createServer(express.logger());
 
@@ -19,8 +20,10 @@ app.configure(function(){
 
 app.configure('development', function(){
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+    app.set('db-uri', 'mongodb://localhost:27017/blog');
 });
 
+boostrap(app);
 
 app.get('/', function(request, response) {
     response.send('Hello World!');
