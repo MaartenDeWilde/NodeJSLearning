@@ -1,0 +1,1 @@
+start "Mongo" /min cmd.exe /c .\mongo\bin\mongod.exe --dbpath .\mongo\data\db --rest

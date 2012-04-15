@@ -6,7 +6,9 @@
  */
 
 var mongoose = require('./mongoose.js');
+var routes = require('./routes.js');
 
 module.exports = function(app){
   mongoose(app);
+  routes(app);
 };
