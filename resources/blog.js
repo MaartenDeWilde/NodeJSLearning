@@ -5,6 +5,12 @@
  * Time: 20:18
  */
 
+var mongoose = require("mongoose");
+
+var blogPost = mongoose.model('BlogPost');
+
 exports.getPosts = function(req,res){
-    res.send('show posts');
+    blogPost.find({}).run(function(err,posts){
+        res.partial('partials/games', {posts: posts});
+    });
 } ;
