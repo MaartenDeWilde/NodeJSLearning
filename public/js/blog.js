@@ -5,7 +5,7 @@
  * Time: 18:23
  */
 $(document).ready(function(){
-    jQuery.get('/characters', function(posts){
-       $("articleSection").append(posts);
+    jQuery.get('/posts', function(posts){
+       $("#articleSection").append(posts);
     });
 });
