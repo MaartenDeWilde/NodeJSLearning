@@ -17,7 +17,8 @@ module.exports = function(app){
         author    : ObjectId,
         title : {type:String, required : true},
         content : {type:String, required:true},
-        postDate: {type:Date, required:true}
+        postDate: {type:Date, required:true},
+        user: {type:String, required:false}
     });
 
     mongoose.model('BlogPost', BlogPostSchema);
