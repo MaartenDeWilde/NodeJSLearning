@@ -11,5 +11,5 @@ module.exports = function(app){
 
     app.get('/posts', blogController.getPosts);
 
-    app.get('/create', blogController.create);
+    app.post('/create', blogController.create);
 };
