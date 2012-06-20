@@ -1,0 +1,30 @@
+- if (!everyauth.loggedIn)
+    #google-login
+       section
+         br
+         h2 Welcome
+             br
+             br
+         p Login
+             a(href='/auth/google', style='border: 0px; margin:5px;')
+                 img(style='border: 0px', src='https://www.google.com/favicon.ico')
+- else
+    section
+        nav
+            a(href='index.html') NOTES
+            a(href='#', id='current') CREATE
+            a(href='/logout') SIGN OUT
+        hr
+        article
+              header
+                h2 Title
+              br
+              input(id='title')
+              header
+                h2 Content
+              br
+              input(id='contentField')
+              p
+
+              button(id='btnSave')
+                    label Save

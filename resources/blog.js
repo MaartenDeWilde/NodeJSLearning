@@ -25,10 +25,13 @@ exports.getPosts = function(req,res){
     }
 } ;
 
+exports.getCreateForm = function(req,res){
+    res.partial('partials/createForm',{});
+};
+
 exports.create = function(req, res){
 
     var post = new blogPost();
-
     post.title = req.body.title;
     post.content = req.body.content;
     post.postDate = new Date();

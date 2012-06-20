@@ -48,19 +48,63 @@ table {
 }
 
 body {
-    font-family: 'Calibri', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     min-height: 740px;
     background: #FFF;
     -webkit-font-smoothing: antialiased;
 }
+
+a{
+    color: #1BA1E2;
+}
+
 #articleSection article header{
-    font-weight: bold;
+    font-size: 20px;
+    color: #1BA1E2;
     margin-bottom: 5px;
+}
+
+#google-login{
+    margin:5px;
+}
+
+#google-login h2{
+    font-size: 20px;
+    color: #1BA1E2;
 }
 
 #articleSection article{
     margin-left: 20px;
     margin-top: 20px;
+}
+
+#articleSection nav{
+    margin: 20px;
+}
+
+#articleSection nav a {
+    font-size: 20px;
+    margin-right: 5px;
+    background: #F0F1F4;
+    color:#253340;
+    padding-left: 10px;
+    padding-right: 50px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-decoration:none;
+
+}
+
+#articleSection nav a:hover {
+    border-bottom-width: 3px;
+    border-bottom-color: #1BA1E2;
+    border-bottom-style: solid;
+}
+
+#articleSection nav a#current{
+    border-bottom-width: 3px;
+    border-bottom-color: #1BA1E2;
+    border-bottom-style: solid;
 }
 
 #articleSection article #content{
@@ -69,7 +113,7 @@ body {
 
 #about{
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 5px;
     position: absolute;
     bottom: 0;
 }

@@ -10,6 +10,6 @@ module.exports = function(app){
     var blogController = require('./../resources/blog.js');
 
     app.get('/posts', blogController.getPosts);
-
+    app.get('/createForm', blogController.getCreateForm);
     app.post('/create', blogController.create);
 };

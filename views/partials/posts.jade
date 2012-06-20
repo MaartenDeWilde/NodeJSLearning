@@ -1,30 +1,25 @@
 - if (!everyauth.loggedIn)
-  h2 Not Authenticated
-   #google-login
-    a(href='/auth/google', style='border: 0px')
-      img(style='border: 0px', src='https://www.google.com/favicon.ico')
+  #google-login
+      section
+        br
+        h2 Welcome
+            br
+            br
+        p Login
+            a(href='/auth/google', style='border: 0px; margin:5px;')
+                img(style='border: 0px', src='https://www.google.com/favicon.ico')
 - else
-  h2 Authenticated
-  - if (everyauth.google)
-    h3 Google User Data
-    p= JSON.stringify(everyauth.google.user)
-  h3
-    a(href='/logout') Logout
-
-    -each blogPost in posts
-        article
-            header
-                #{blogPost.title}
-            #content
-                #{blogPost.content}
-  #blog
-      p Title
-        br
-        input(id='title')
-      p Content
-        br
-        input(id='contentField')
-      p
-        button(id='btnSave')
-            label Save
+    section
+        nav
+            a(href='#' ,id='current') NOTES
+            a(href='create.html') CREATE
+            a(href='/logout') SIGN OUT
+        section
+            hr
+        -each blogPost in posts
+            article
+                header
+                    #{blogPost.title}
+                article
+                    #{blogPost.content}
 
