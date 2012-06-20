@@ -3,7 +3,6 @@
  * User: Maarten De Wilde
  * Date: 3/05/12
  * Time: 18:51
- * To change this template use File | Settings | File Templates.
  */
 module.exports = function(app){
 
@@ -35,14 +34,14 @@ module.exports = function(app){
 
 
     everyauth.google
-        .appId('id')
-        .appSecret('secret')
+        .appId('677176456453.apps.googleusercontent.com')
+        .appSecret('KEeMtQJfgAg36f-Zy94oeYx7')
         .scope('https://www.googleapis.com/auth/userinfo.profile https://www.google.com/m8/feeds/')
         .findOrCreateUser( function (sess, accessToken, extra, googleUser) {
             googleUser.refreshToken = extra.refresh_token;
             googleUser.expiresIn = extra.expires_in;
             return usersByGoogleId[googleUser.id] || (usersByGoogleId[googleUser.id] = addUser('google', googleUser));
         })
-        .redirectPath('/blog.html');
+        .redirectPath('/index.html');
 
 } ;
