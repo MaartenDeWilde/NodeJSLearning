@@ -9,6 +9,6 @@
         "mongoose-types": ">=1.0.3",
         "redis": ">0.0.1",
         "everyauth": ">=0.2.28",
-        "connect": ">=0"
+        "connect": "<2.0.0"
     }
 }
