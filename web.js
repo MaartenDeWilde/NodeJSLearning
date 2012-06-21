@@ -33,13 +33,13 @@ app.configure('development', function(){
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
     app.set('db-uri', 'mongodb://localhost:27017/blog');
 });
-//
-//app.configure('production', function() {
-//    app.set('db-uri', process.env.MONGOHQ_URL);
-//    app.set('port',process.env.PORT);
-//    app.set('debug',true);
-//    app.set('host','http://mdwblogapp.herokuapp.com')
-//});
+
+app.configure('production', function() {
+    app.set('db-uri', process.env.MONGOHQ_URL);
+    app.set('port',process.env.PORT);
+    app.set('debug',true);
+    app.set('host','http://mdwblogapp.herokuapp.com')
+});
 
 boostrap(app);
 
