@@ -34,8 +34,8 @@ module.exports = function(app){
 
 
     everyauth.google
-        .appId('677176456453.apps.googleusercontent.com')
-        .appSecret('KEeMtQJfgAg36f-Zy94oeYx7')
+        .appId('398868782508.apps.googleusercontent.com')
+        .appSecret('Xn1C_AhECoSJD-1Su5eH-Ige')
         .scope('https://www.googleapis.com/auth/userinfo.profile https://www.google.com/m8/feeds/')
         .findOrCreateUser( function (sess, accessToken, extra, googleUser) {
             googleUser.refreshToken = extra.refresh_token;
